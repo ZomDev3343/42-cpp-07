@@ -1,0 +1,6 @@
+*.o
+*/*.o
+ex00/start
+ex01/iter
+ex02/array
+.vscode
