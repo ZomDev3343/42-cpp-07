@@ -4,6 +4,7 @@
 # include <iostream>
 # include <string>
 # include <sys/types.h>
+# include <stdexcept>
 
 template <typename T>
 class Array
@@ -112,8 +113,8 @@ std::ostream &			operator<<( std::ostream & o, Array<T> const & i )
 template <typename T>
 T&			Array<T>::operator[]( std::size_t idx )
 {
-	if (idx < 0 || idx >= this->size)
-		throw std::exception("Array<T>: error: out of bounds");
+	if (idx >= this->_size)
+		throw std::out_of_range("Error: Array<T>: Invalid index !");
 	return this->_array[idx];
 }
 

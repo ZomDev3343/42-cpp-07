@@ -9,7 +9,7 @@ int main()
 	std::cout << "A: " << a << "\nB: " << b << std::endl;
 
 	std::cout << "Max(a, b): " << ::max(a, b) << std::endl;
-	std::cout << "Min(a, b): " << min(a, b) << std::endl;
+	std::cout << "Min(a, b): " << ::min(a, b) << std::endl;
 
 	{
 		std::cout << std::endl;
