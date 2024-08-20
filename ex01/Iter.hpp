@@ -5,7 +5,7 @@
 # include <string.h>
 
 template <typename T>
-void	iter(T* array, size_t len, void (*f)(T elem))
+void	iter(T* array, size_t len, void (*f)(T &elem))
 {
 	if (!array || len <= 0 || !f)
 		return ;
@@ -14,13 +14,13 @@ void	iter(T* array, size_t len, void (*f)(T elem))
 }
 
 template <typename T>
-void plusTwo(T elem)
+void plusTwo(T &elem)
 {
-	std::cout << "PlusTwo[" << elem << "]: " << elem + 2 << std::endl;
+	elem += 2;
 }
 
 template <typename T>
-void plusTwoS(T elem)
+void plusTwoS(T &elem)
 {
 	std::cout << "PlusTwo[" << elem << "]: " << elem + "2" << std::endl;
 }
